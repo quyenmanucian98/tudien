@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input id="nhapvao" type="text"/>
+<button type="button" onclick="timkiem()">Tìm Kiếm</button>
+<script>
+    function timkiem() {
+        let mang1 = ["Dog", "Cat", "Fish", "Lion", "Tiger"];
+        let mang2 = ["Chó", "Mèo", "Cá", "Sư Tử", "Hổ"];
+        let quyen = document.getElementById('nhapvao').value;
+        for (let q = 0; q < mang1.length; q++) {
+            if (quyen === mang1[q]) {
+                quyen = mang2[q];
+                document.getElementById('nhapvao').value = quyen;
+                break;
+            }
+            else{
+                document.getElementById('nhapvao').value="không tìm thấy";
+            }
+        }
+    }
+</script>
+</body>
+</html>
